@@ -72,7 +72,7 @@ public class main {
         
         
         //Création et affichage du tour insertion loin
-        System.out.println("");
+        System.out.println("-------------------------------------------------------------------------------------------------------");
         ArrayList<Ville> listeVilleInsertionLoin = new ArrayList(listeVille);
         AlgoInsertionLoin AIL = new AlgoInsertionLoin(listeVilleInsertionLoin);
         Tour tourInsertionLoin = AIL.execute();
