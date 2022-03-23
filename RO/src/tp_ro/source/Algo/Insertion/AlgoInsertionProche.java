@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tp_ro.source.Algo;
+package tp_ro.source.Algo.Insertion;
 
 import java.util.ArrayList;
-import tp_ro.Ville;
+import tp_ro.source.Ville;
+import tp_ro.source.Algo.Algo;
 import tp_ro.source.Tour;
 
 /**

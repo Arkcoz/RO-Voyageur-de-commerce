@@ -6,7 +6,7 @@
 package tp_ro.source;
 
 import java.util.ArrayList;
-import tp_ro.Ville;
+import java.util.Collections;
 
 /**
  *
@@ -22,8 +22,21 @@ public class Tour {
         this.type = type;
     }
     
+    public Tour(){
+        
+    }
+
+    public void setListeTournee(ArrayList<Ville> listeTournee) {
+        this.listeTournee = listeTournee;
+    }
+
+    public String getType() {
+        return type;
+    }
     
-    public double cout() {
+    
+    
+    public double calculerCout() {
         double res= 0;
         for(int i=0; i<this.listeTournee.size();i++){
             if(i+1 == this.listeTournee.size()){
@@ -38,7 +51,7 @@ public class Tour {
     
     
     public void afficherCout(){
-        System.out.println("Le coût du tour est de " + this.cout() + " km");
+        System.out.println("Le coût du tour est de " + this.calculerCout() + " km");
     }
     
     public void afficherTour() {
@@ -59,4 +72,10 @@ public class Tour {
         afficherTour();
         afficherCout();
     }
+
+    public ArrayList<Ville> getListeTournee() {
+        return listeTournee;
+    }
+    
+    
 }

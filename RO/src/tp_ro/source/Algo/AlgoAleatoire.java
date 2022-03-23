@@ -7,7 +7,7 @@ package tp_ro.source.Algo;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import tp_ro.Ville;
+import tp_ro.source.Ville;
 import tp_ro.source.Tour;
 
 /**
