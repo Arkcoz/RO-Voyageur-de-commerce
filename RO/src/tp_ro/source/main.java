@@ -14,6 +14,8 @@ import tp_ro.source.Algo.Echange.EchangeSuccesseurs.AlgoEchangeSuccesseurs_P;
 import tp_ro.source.Algo.Insertion.AlgoInsertionLoin;
 import tp_ro.source.Algo.Insertion.AlgoInsertionProche;
 import tp_ro.source.Algo.AlgoPlusProcheVoisin;
+import tp_ro.source.Algo.Echange.EchangeSommetsQuelconques.AlgoEchangeSommetsQuelconques_M;
+import tp_ro.source.Algo.Echange.EchangeSommetsQuelconques.AlgoEchangeSommetsQuelconques_P;
 import tp_ro.source.Tour;
 
 /**
@@ -88,6 +90,20 @@ public class main {
         AlgoEchangeSuccesseurs_M AES_M = new AlgoEchangeSuccesseurs_M(listeVilleEchangeSuccesseurs_M);
         Tour tourEchangeSuccesseur_M = AES_M.execute();
         tourEchangeSuccesseur_M.afficherInformations();
+        
+        //Échange de sommets quelconques : premier d'abord
+        System.out.println("-------------------------------------------------------------------------------------------------------");
+        ArrayList<Ville> listeVilleEchangeSommetsQuelconques_P = new ArrayList(listeVille);
+        AlgoEchangeSommetsQuelconques_P AESQ_P = new AlgoEchangeSommetsQuelconques_P(listeVilleEchangeSommetsQuelconques_P);
+        Tour tourEchangeSommetsQuelconques_P = AESQ_P.execute();
+        tourEchangeSommetsQuelconques_P.afficherInformations();
+        
+        //Échange de sommets quelconques : meilleur d'abord
+        System.out.println("-------------------------------------------------------------------------------------------------------");
+        ArrayList<Ville> listeVilleEchangeSommetsQuelconques_M = new ArrayList(listeVille);
+        AlgoEchangeSommetsQuelconques_M AESQ_M = new AlgoEchangeSommetsQuelconques_M(listeVilleEchangeSommetsQuelconques_M);
+        Tour tourEchangeSommetsQuelconques_M = AESQ_M.execute();
+        tourEchangeSommetsQuelconques_M.afficherInformations();
         
 
     }
